@@ -68,3 +68,9 @@ hamBtn.addEventListener('click', (e) => {
     e.currentTarget.classList.toggle('open');
     mobileNav.classList.toggle('hidden')
 })
+
+// -------------Dynamic Copyright Date---------------
+window.onload = () => {
+    let copyDate = document.getElementById('copyright-date')
+    copyDate.innerText = new Date().getFullYear()
+}
