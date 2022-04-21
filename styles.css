@@ -560,6 +560,15 @@ footer img{
         height: 30vh;
     }
 
+    #cancel{
+        margin-bottom: 10vh;
+    }
+
+    #preview-image{
+        margin-top: 5vh;
+        height: 50vh;
+    }
+
     #mail-section{
         width: 50%;
         border: none;
