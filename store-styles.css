@@ -17,6 +17,47 @@ main{
     font-weight:600;
 }
 
+.add-to-cart-btn{
+    border-radius: 5px;
+    border-color: var(--primary);
+    background-color: var(--primary);
+    color: var(--foreground);
+}
+
+.add-to-cart-btn:hover{
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.remove-btn{
+    background-color: red;
+    color: var(--foreground);
+    border-color: red;
+    border-radius: 5px;
+}
+
+.remove-btn:hover{
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.item-number-input{
+    border: 1px solid var(--primary);
+    border-radius: 5px;
+}
+
+#purchase-btn{
+    background-color: var(--primary);
+    color: var(--foreground);
+    font-size: large;
+    border-radius: 5px;
+}
+
+#purchase-btn:hover{
+    opacity: 0.8;
+    cursor: pointer;
+}
+
 .cart-row{
     display: flex;
     flex-direction: row;
@@ -91,6 +132,16 @@ main{
     display: block;
 }
 
+#orderForm input[type=text], #orderForm input[type=tel], #orderForm input[type=email]{
+    border: 1px solid var(--primary);
+    border-radius: 5px;
+    margin: 4px;
+}
+
+#orderForm input[type=radio]{
+    accent-color: var(--primary);
+}
+
 #map-section{
     width: 80%;
     height: 0px;
@@ -161,6 +212,17 @@ h4{
       color: var(--primary);
   }
 
+  #place-order-btn{
+    border-color: var(--primary);
+    border-radius: 5px;
+    background-color: var(--primary);
+    color: var(--foreground);
+  }
+
+  #place-order-btn:hover{
+    opacity: 0.8;
+  }
+
 
   #purchaseId-modal-block{
     background-color: rgba(128, 128, 128, 0.212);
@@ -218,6 +280,17 @@ h4{
       width: 20px;
       height: 20px;
       animation: spin 1s linear .5s infinite;
+  }
+
+  #reload-page-button{
+    border-color: var(--primary);
+    border-radius: 5px;
+    background-color: var(--primary);
+    color: var(--foreground);
+  }
+
+  #reload-page-button:hover{
+    opacity: 0.8;
   }
 
   @keyframes spin{

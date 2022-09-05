@@ -207,9 +207,9 @@ function ready(){
                                             modalBlock.style.display = "none"
                                             let orderInfoContainer = document.getElementById('info-container')
                                             orderInfoContainer.innerHTML = `<h2>Order Successful</h2>
-                                            <div>Order Number:</div>
-                                            <h1 id="orderNumber">${orderID}</h1>
-                                            <div>Kindly make payment to the MTN Mobile Money Number <span>0244 444 444</span> with the Order Number as reference</div>`
+                                                                            <div>Order Number:</div>
+                                                                            <h1 id="orderNumber">${orderID}</h1>
+                                                                            <div>Kindly make payment to the MTN Mobile Money Number <span>0244 444 444</span> with the Order Number as reference</div>`
                                             purchaseIdModalBlock.style.display = 'block'
                                             orderInfoContainer.scrollIntoView(true)
                                         },
