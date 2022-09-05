@@ -5,9 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Looking for the best bread, pizza and beverages in Ghana? We've got you covered, with high quality bread, scrumptious pizza and the sweetest beverages. Great taste is our hallmark!">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="images/actual_kdee_png-removebg-preview.png">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.css" rel="stylesheet">
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.js"></script>
+    <script src='https://unpkg.com/@turf/turf@6/turf.min.js'></script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="store-styles.css">
+    <script src="/jquery-3.6.0.min.js"></script>
     <title>KDEE BAKERY & BEVERAGES | Gallery</title>
 </head>
 <body>
@@ -24,7 +31,10 @@
                 <a href="index.html">Home</a>
             </li>
             <li>
-                <a href="#">Gallery</a>
+                <a href="/gallery.html">Gallery</a>
+            </li>
+            <li>
+                <a href="#">Store</a>
             </li>
             <li>
                 <a href="get_in_touch.html">Get In Touch</a>
@@ -48,12 +58,53 @@
                     <a href="#">Gallery</a>
                 </li>
                 <li>
+                    <a href="#">Store</a>
+                </li>
+                <li>
                     <a href="get_in_touch.html">Get In Touch</a>
                 </li>
             </ul>
         </div>
         <section>
             <h2>Bread</h2>
+            <div class="images-container">
+                <div class="product-card">
+                    <img src="images/stock_images/white-bread.jpg" alt="" class="product-img">
+                    <div class="product-details">
+                        <span class="product-name">White Bread</span>
+                        <h4 class="product-price">$7.00</h4>
+                        <button class="add-to-cart-btn">Add To Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="images/stock_images/bran-bread-wooden-dark-background-173927509.jpg" alt="" class="product-img">
+                    <div class="product-details">
+                        <span class="product-name">Bran Bread</span>
+                        <h4 class="product-price">$8.00</h4>
+                        <button class="add-to-cart-btn">Add To Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="images/stock_images/english-muffin.webp" alt="" class="product-img">
+                    <div class="product-details">
+                        <span class="product-name">English Muffin</span>
+                        <h4 class="product-price">$5.00</h4>
+                        <button class="add-to-cart-btn">Add To Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="images/stock_images/banana-bread.jpg" alt="" class="product-img">
+                    <div class="product-details">
+                        <span class="product-name">Banana Bread</span>
+                        <h4 class="product-price">$7.00</h4>
+                        <button class="add-to-cart-btn">Add To Cart</button>
+                    </div>
+                </div>
+            </div>
+
             
         </section>
 
@@ -61,11 +112,81 @@
             <h2>Pizza</h2>
             <div class="images-container">
                 <div class="product-card">
-                    <img src="images/pizza.jpg" alt="" class="product-img">
+                    <img src="images/stock_images/pepperoni-pizza.jpg" alt="" class="product-img">
                     <div class="product-details">
-                        <span>Beef Pizza</span>
-                        <h4>$5.00</h4>
-                        <button>Add To Cart</button>
+                        <span class="product-name">Pepperoni Pizza</span>
+                        <h4 class="product-price">$7.00</h4>
+                        <button class="add-to-cart-btn">Add To Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="images/stock_images/hawaiian-pizza-4691857-hero-01-1a8f6764c70e4113bbf31bd1a73aca2e.jpg" alt="" class="product-img">
+                    <div class="product-details">
+                        <span class="product-name">Hawaiian Pizza</span>
+                        <h4 class="product-price">$12.00</h4>
+                        <button class="add-to-cart-btn">Add To Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="images/stock_images/Mushroom-pizza-2.jpg" alt="" class="product-img">
+                    <div class="product-details">
+                        <span class="product-name">Mushroom Pizza</span>
+                        <h4 class="product-price">$5.00</h4>
+                        <button class="add-to-cart-btn">Add To Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="images/stock_images/seafood-pizza.jpg" alt="" class="product-img">
+                    <div class="product-details">
+                        <span class="product-name">Seafood Pizza</span>
+                        <h4 class="product-price">$9.00</h4>
+                        <button class="add-to-cart-btn">Add To Cart</button>
+                    </div>
+                </div>
+
+            </div>
+            
+        </section>
+
+        <section>
+            <h2>Cakes</h2>
+            <div class="images-container">
+                <div class="product-card">
+                    <img src="images/stock_images/chocolate-cake.jpg" alt="" class="product-img">
+                    <div class="product-details">
+                        <span class="product-name">Chocolate Cake</span>
+                        <h4 class="product-price">$15.00</h4>
+                        <button class="add-to-cart-btn">Add To Cart</button>
+                    </div>
+                </div>
+    
+                <div class="product-card">
+                    <img src="images/stock_images/vanilla-cake.jpg" alt="" class="product-img">
+                    <div class="product-details">
+                        <span class="product-name">Vanilla Cake</span>
+                        <h4 class="product-price">$10.00</h4>
+                        <button class="add-to-cart-btn">Add To Cart</button>
+                    </div>
+                </div>
+    
+                <div class="product-card">
+                    <img src="images/stock_images/20277-strawberry-ombre-cake-600x600.jpg" alt="" class="product-img">
+                    <div class="product-details">
+                        <span class="product-name">Strawberry Cake</span>
+                        <h4 class="product-price">$12.00</h4>
+                        <button class="add-to-cart-btn">Add To Cart</button>
+                    </div>
+                </div>
+    
+                <div class="product-card">
+                    <img src="images/stock_images/red-velvet-layer-cake-square.webp" alt="" class="product-img">
+                    <div class="product-details">
+                        <span class="product-name">Red Velvet Cake</span>
+                        <h4 class="product-price">$15.00</h4>
+                        <button class="add-to-cart-btn">Add To Cart</button>
                     </div>
                 </div>
             </div>
@@ -73,27 +194,212 @@
         </section>
 
         <section>
-            <h2>Cakes</h2>
-            
-        </section>
-
-        <section>
             <h2>Pastries</h2>
+            <div class="images-container">
+                <div class="product-card">
+                    <img src="images/stock_images/cupcakes.jpg" alt="" class="product-img">
+                    <div class="product-details">
+                        <span class="product-name">Cupcakes(5x Pieces)</span>
+                        <h4 class="product-price">$5.00</h4>
+                        <button class="add-to-cart-btn">Add To Cart</button>
+                    </div>
+                </div>
+    
+                <div class="product-card">
+                    <img src="images/stock_images/rock buns.jpg" alt="" class="product-img">
+                    <div class="product-details">
+                        <span class="product-name">Rock Buns(5x Pieces)</span>
+                        <h4 class="product-price">$10.00</h4>
+                        <button class="add-to-cart-btn">Add To Cart</button>
+                    </div>
+                </div>
+    
+                <div class="product-card">
+                    <img src="images/stock_images/turnover.jpg" alt="" class="product-img">
+                    <div class="product-details">
+                        <span class="product-name">Turnover (Meat Pie)</span>
+                        <h4 class="product-price">$5.00</h4>
+                        <button class="add-to-cart-btn">Add To Cart</button>
+                    </div>
+                </div>
+    
+                <div class="product-card">
+                    <img src="images/stock_images/spring rolls.jpg" alt="" class="product-img">
+                    <div class="product-details">
+                        <span class="product-name">Spring Rolls(5x Pieces)</span>
+                        <h4 class="product-price">$5.00</h4>
+                        <button class="add-to-cart-btn">Add To Cart</button>
+                    </div>
+                </div>
+            </div>
             
         </section>
 
         <section>
             <h2>Beverages</h2>
+            <div class="images-container">
+                <div class="product-card">
+                    <img src="images/original_images/b11.jpeg" alt="" class="product-img">
+                    <div class="product-details">
+                        <span class="product-name">Yoghurt</span>
+                        <h4 class="product-price">$10.00</h4>
+                        <button class="add-to-cart-btn">Add To Cart</button>
+                    </div>
+                </div>
+    
+                <div class="product-card">
+                    <img src="images/original_images/b8-crop.jpeg" alt="" class="product-img">
+                    <div class="product-details">
+                        <span class="product-name">Strawberry Yoghurt</span>
+                        <h4 class="product-price">$10.00</h4>
+                        <button class="add-to-cart-btn">Add To Cart</button>
+                    </div>
+                </div>
+    
+                <div class="product-card">
+                    <img src="images/stock_images/orange juice.jpg" alt="" class="product-img">
+                    <div class="product-details">
+                        <span class="product-name">Orange Juice</span>
+                        <h4 class="product-price">$7.00</h4>
+                        <button class="add-to-cart-btn">Add To Cart</button>
+                    </div>
+                </div>
+    
+                <div class="product-card">
+                    <img src="images/stock_images/pineapple juice.jpg" alt="" class="product-img">
+                    <div class="product-details">
+                        <span class="product-name">Pineapple Juice</span>
+                        <h4 class="product-price">$10.00</h4>
+                        <button class="add-to-cart-btn">Add To Cart</button>
+                    </div>
+                </div>
+            </div>
             
         </section>
 
-        <div id="preview-container">
+        <div id="cart">
+            <h2>CART</h2>
+            <div id="cart-headings" class="cart-row">
+                <span>Item</span>
+                <span class="item-price">Price</span>
+                <span>Qty</span>
+            </div>
+            <!-- <div class="cart-row">
+                <div class="item-block item-description">
+                    <img src="/images/original_images/b2.jpeg" alt="">
+                    <span class="item-name">Bread</span>
+                </div>
+                <div class="item-price">
+                    $22.00
+                </div>
+                <div class="item-block item-qty">
+                    <input class="item-number-input" type="number" value="1" min="1">
+                    <button class="remove-btn">Remove</button>
+                </div>
+            </div>
+            <div class="cart-row">
+                <div class="item-block item-description">
+                    <img src="/images/original_images/c6.jpeg" alt="">
+                    <span class="item-name">Cake</span>
+                </div>
+                <div class="item-price">
+                    $35.39
+                </div>
+                <div class="item-block item-qty">
+                    <input class="item-number-input" type="number" value="1" min="1">
+                    <button class="remove-btn">Remove</button>
+                </div>
+            </div> -->
+        </div>
+        <div id="cart-total-block">
+            <b>TOTAL</b>
+            <span class="cart-total">$0</span>
+        </div>
+        <div>
+            <button id="purchase-btn">PURCHASE</button>
+        </div>
+
+        <!-- <div id="preview-container">
             <div id="cancel">X</div>
             <div class="slider-btn btn-left btn-round"><</div>
             <div class="slider-btn btn-right btn-round">></div>
             <img id="preview-image" src="images/2.png" alt="">
+        </div> -->
+
+        <!-- ===================Purchase Finalisation================== -->
+        <div id="checkout-modal-block">
+            <div id="checkout-modal">
+                <h2>CHECKOUT</h2>
+                <div>
+                    <form id="orderForm" action="">
+                        <!-- customer details -->
+                            <label for="customer-name">Name:</label>
+                            <input type="text" id="customer-name" placeholder="Full Name*" required>
+                            <br>
+                            <label for="customer-phone">Phone Number</label>
+                            <input type="tel" id="customer-phone" placeholder="Telephone*" required>
+                            <br>
+                            <label for="customer-mail">Email</label>
+                            <input type="email" id="customer-mail" placeholder="egs@example.com">
+                            <br>
+                            <label for="radio-pickup">Pickup</label>
+                            <input type="radio" name="order-type" id="radio-pickup" checked>
+                            <label for="radio-pickup">Delivery</label>
+                            <input type="radio" name="order-type" id="radio-delivery">
+                            <div id="map-section"></div>
+                            <div id="freezoneInfo">Delivery is free within the <b>highlighted area</b>.</div>
+                        </div>
+                        <div id="checkout-products">
+                            <!-- product details -->
+                            <h3>Your Order</h3>
+                            <div class="order-item-details">
+                                <h4>Item</h4>
+                                <h4>Quantity</h4>
+                                <h4>Subtotal</h4>
+                            </div>
+                            <!-- <div class="order-item-details">
+                                <div class="order-item-name">Bread</div>
+                                <div class="order-item-qty">x4</div>
+                                <div class="order-item-subtotal">200.00</div>
+                            </div>
+                            <div class="order-item-details">
+                                <div class="order-item-name">Bread</div>
+                                <div class="order-item-qty">x4</div>
+                                <div class="order-item-subtotal">200.00</div>
+                            </div> -->
+                        </div>
+                        <div id="checkout-delivery">
+                            <span>Delivery Fee:</span>
+                            <span>Free Delivery</span>
+                        </div>
+                        <div id="order-item-total-container">
+                            <div id="order-item-total">
+                                <h3>TOTAL:</h3>
+                                <b></b>
+                            </div>
+                        </div>
+                        <button id="place-order-btn" type="submit">Place Order</button>
+                    </form>
+                </div>
+
         </div>
-        <script src="gallery.js"></script>
+        <div id="purchaseId-modal-block">
+            <div id="purchaseId-modal">
+                <!-- <h2>Order Successful</h2>
+                <div>Order Number:</div>
+                <h1 id="orderNumber">2133241241234</h1>
+                <div>Kindly make payment to the MTN Mobile Money Number <span>0244 444 444</span> with the Order Number as reference</div> -->
+                <div id="info-container"></div>
+                <a href="store.html">
+                    <button id="reload-page-button">Ok</button>
+                </a>
+            </div>
+        </div>
+        <a class="scroll-to-cart-icon-container" href="#cart">
+            <span class="material-symbols-outlined">
+            shopping_cart
+            </span>
+        </a>
     </main>
     <footer>
         <div id="media-links">
@@ -104,5 +410,6 @@
         </div>
         <div>&copy <span id="copyright-date"></span> KDEE Bakery and Beverages</div>
     </footer>
+    <script src="store.js" type="module"></script>
 </body>
 </html>
