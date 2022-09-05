@@ -193,6 +193,7 @@ function ready(){
                                     // {name:"logItemNumber", value: purchaseItemNumber},
                                     // {name:"logItemTotalPrice", value: purchaseTotalPrice},
                                     {name:"logItems", value: logItems},
+                                    {name:"logTotalPrice", value: logTotalPrice},
                                     {name:"deliveryFee", value: deliveryFee.toString()}
                                 ]
                                 // console.log(itemLog)
@@ -209,6 +210,7 @@ function ready(){
                                             orderInfoContainer.innerHTML = `<h2>Order Successful</h2>
                                                                             <div>Order Number:</div>
                                                                             <h1 id="orderNumber">${orderID}</h1>
+                                                                            <h3>Total Price: $${logTotalPrice + deliveryFee}</h3>
                                                                             <div>Kindly make payment to the MTN Mobile Money Number <span>0244 444 444</span> with the Order Number as reference</div>`
                                             purchaseIdModalBlock.style.display = 'block'
                                             orderInfoContainer.scrollIntoView(true)
